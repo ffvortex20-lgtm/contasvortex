@@ -1,18 +1,21 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #0a0a0a;
+  background: #0b0b0b;
   color: white;
+}
+
+.container {
+  width: 420px;
+  margin: 50px auto;
+}
+
+.top {
   text-align: center;
 }
 
-header {
-  padding: 15px;
-  border-bottom: 1px solid #222;
-}
-
-.tag {
-  background: #111;
+.badge {
+  background: #1a1a1a;
   color: gold;
   padding: 5px 15px;
   border-radius: 20px;
@@ -21,18 +24,17 @@ header {
 
 h1 {
   color: gold;
+  margin: 10px 0;
 }
 
-.box {
-  margin: 30px auto;
-  width: 400px;
+.card {
   background: #111;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255,255,0,0.1);
+  margin-top: 20px;
 }
 
-.progress-text {
+.progress-info {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
@@ -50,32 +52,55 @@ h1 {
   width: 0%;
   background: gold;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
 .task {
   background: #1a1a1a;
   margin: 10px 0;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 12px;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
 }
 
-button {
+.task small {
+  color: #aaa;
+}
+
+.task button {
   background: gold;
   border: none;
   padding: 8px 15px;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
 }
 
-.unlock button {
+.task.done {
+  background: #0f2e1c;
+  border: 1px solid #00ff88;
+}
+
+.task.done button {
+  background: #00ff88;
+  color: black;
+}
+
+.unlock {
   width: 100%;
   margin-top: 15px;
-  background: gray;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #333;
+  color: #999;
+  cursor: not-allowed;
 }
 
-.unlock button.active {
+.unlock.active {
   background: gold;
+  color: black;
+  cursor: pointer;
 }
