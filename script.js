@@ -1,36 +1,36 @@
-let completed = [false, false, false, false];
+let done = [false,false,false,false];
 
-function complete(i, link) {
-  window.open(link, "_blank");
+function go(i, link){
+  window.open(link,"_blank");
 
-  if (!completed[i - 1]) {
-    completed[i - 1] = true;
+  if(!done[i-1]){
+    done[i-1] = true;
 
-    let task = document.getElementById("task" + i);
-    task.classList.add("done");
+    let el = document.getElementById("t"+i);
+    el.classList.add("done");
 
-    task.querySelector("button").innerText = "✔";
+    el.querySelector("button").innerHTML = "✔";
   }
 
   update();
 }
 
-function update() {
-  let total = completed.filter(v => v).length;
-  let percent = total * 25;
+function update(){
+  let total = done.filter(v=>v).length;
+  let pct = total * 25;
 
-  document.getElementById("progress").style.width = percent + "%";
-  document.getElementById("progressText").innerText = total + "/4 ações concluídas";
-  document.getElementById("percent").innerText = percent + "%";
+  document.getElementById("barFill").style.width = pct+"%";
+  document.getElementById("txt").innerText = total+"/4 ações";
+  document.getElementById("pct").innerText = pct+"%";
 
-  if (total === 4) {
-    let btn = document.getElementById("unlockBtn");
+  if(total === 4){
+    let btn = document.getElementById("unlock");
     btn.disabled = false;
     btn.classList.add("active");
-    btn.innerText = "🔓 Desbloquear acesso";
+    btn.innerText = "🔓 Desbloquear";
   }
 }
 
-function unlock() {
+function openPage(){
   window.location.href = "downloads.html";
 }
