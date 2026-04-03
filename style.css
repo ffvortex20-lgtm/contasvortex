@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0a0a0a;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 15px;
+  border-bottom: 1px solid #222;
+}
+
+.tag {
+  background: #111;
+  color: gold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+h1 {
+  color: gold;
+}
+
+.box {
+  margin: 30px auto;
+  width: 400px;
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,255,0,0.1);
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #222;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: gold;
+  border-radius: 10px;
+}
+
+.task {
+  background: #1a1a1a;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background: gold;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.unlock button {
+  width: 100%;
+  margin-top: 15px;
+  background: gray;
+}
+
+.unlock button.active {
+  background: gold;
+}
