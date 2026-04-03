@@ -1,23 +1,23 @@
 body {
-  margin: 0;
-  font-family: Arial;
-  background: #0b0b0b;
+  margin:0;
+  font-family: 'Segoe UI';
+  background: radial-gradient(circle at top, #111, #050505);
   color: white;
 }
 
-.container {
+.wrapper {
   width: 420px;
-  margin: 50px auto;
+  margin: 60px auto;
 }
 
-.top {
+.header {
   text-align: center;
 }
 
 .badge {
-  background: #1a1a1a;
+  background: rgba(255,215,0,0.1);
   color: gold;
-  padding: 5px 15px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 12px;
 }
@@ -28,79 +28,86 @@ h1 {
 }
 
 .card {
-  background: #111;
-  padding: 20px;
-  border-radius: 15px;
-  margin-top: 20px;
+  margin-top:20px;
+  background: rgba(20,20,20,0.8);
+  padding:20px;
+  border-radius:20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(255,215,0,0.05);
 }
 
-.progress-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
+.progress-top {
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
 }
 
-.progress-bar {
-  height: 8px;
-  background: #222;
-  border-radius: 10px;
-  margin: 10px 0;
+.bar {
+  height:8px;
+  background:#222;
+  border-radius:10px;
+  margin:10px 0;
 }
 
-#progress {
-  height: 100%;
-  width: 0%;
-  background: gold;
-  border-radius: 10px;
-  transition: 0.3s;
+#barFill {
+  height:100%;
+  width:0%;
+  background: linear-gradient(90deg,gold,#ffd700);
+  border-radius:10px;
+  transition:0.4s;
 }
 
 .task {
-  background: #1a1a1a;
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.3s;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px;
+  margin:10px 0;
+  border-radius:12px;
+  background:#1a1a1a;
+  transition:0.3s;
+}
+
+.task:hover {
+  transform: scale(1.02);
+  box-shadow:0 0 15px rgba(255,215,0,0.1);
 }
 
 .task small {
-  color: #aaa;
+  color:#aaa;
 }
 
 .task button {
-  background: gold;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 8px;
-  cursor: pointer;
+  background: linear-gradient(45deg,gold,#ffcc00);
+  border:none;
+  padding:8px 15px;
+  border-radius:8px;
+  cursor:pointer;
 }
 
 .task.done {
-  background: #0f2e1c;
-  border: 1px solid #00ff88;
+  background:#0f2f1f;
+  border:1px solid #00ff88;
+  box-shadow:0 0 15px #00ff8840;
 }
 
 .task.done button {
-  background: #00ff88;
-  color: black;
+  background:#00ff88;
+  color:black;
 }
 
-.unlock {
-  width: 100%;
-  margin-top: 15px;
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  background: #333;
-  color: #999;
-  cursor: not-allowed;
+#unlock {
+  width:100%;
+  margin-top:15px;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#333;
+  color:#777;
 }
 
-.unlock.active {
-  background: gold;
-  color: black;
-  cursor: pointer;
+#unlock.active {
+  background: linear-gradient(45deg,gold,#ffcc00);
+  color:black;
+  box-shadow:0 0 20px rgba(255,215,0,0.5);
 }
