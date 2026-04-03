@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Desbloqueie o Acesso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>🔒 LinkLocker</h2>
+</header>
+
+<main>
+  <span class="tag">CONTEÚDO EXCLUSIVO</span>
+  <h1>Desbloqueie o Acesso</h1>
+  <p>Complete as ações abaixo para liberar o conteúdo.</p>
+
+  <div class="box">
+    <div class="progress-text">
+      <span id="progressText">0/4 ações concluídas</span>
+      <span id="percent">0%</span>
+    </div>
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+
+    <!-- AÇÕES -->
+    <div class="task">
+      <span>🌐 Siga meu canal do zap</span>
+      <button onclick="complete(1, 'https://whatsapp.com/channel/0029VbC7FWcJENxsIOsndS15')">Ir</button>
+    </div>
+
+    <div class="task">
+      <span>💬 Grupo chat 24h</span>
+      <button onclick="complete(2, 'https://chat.whatsapp.com/JRp7UwHFhfPIFokS5iGre9')">Ir</button>
+    </div>
+
+    <div class="task">
+      <span>▶️ Se inscreva no YouTube</span>
+      <button onclick="complete(3, 'https://www.youtube.com/@Vortex-Ofc1')">Ir</button>
+    </div>
+
+    <div class="task">
+      <span>👍 Like no vídeo</span>
+      <button onclick="complete(4, 'https://youtu.be/mTE6soYWmfA?si=QrxFGwEoCM00I-Kh')">Ir</button>
+    </div>
+
+    <div class="unlock">
+      <button id="unlockBtn" disabled onclick="unlock()">🔓 Desbloquear</button>
+    </div>
+
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
