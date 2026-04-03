@@ -1,23 +1,33 @@
 let completed = [false, false, false, false];
 
-function complete(index, link) {
+function complete(i, link) {
   window.open(link, "_blank");
-  completed[index - 1] = true;
-  updateProgress();
+
+  if (!completed[i - 1]) {
+    completed[i - 1] = true;
+
+    let task = document.getElementById("task" + i);
+    task.classList.add("done");
+
+    task.querySelector("button").innerText = "✔";
+  }
+
+  update();
 }
 
-function updateProgress() {
-  let count = completed.filter(v => v).length;
-  let percent = (count / 4) * 100;
+function update() {
+  let total = completed.filter(v => v).length;
+  let percent = total * 25;
 
   document.getElementById("progress").style.width = percent + "%";
-  document.getElementById("progressText").innerText = count + "/4 ações concluídas";
+  document.getElementById("progressText").innerText = total + "/4 ações concluídas";
   document.getElementById("percent").innerText = percent + "%";
 
-  if (count === 4) {
+  if (total === 4) {
     let btn = document.getElementById("unlockBtn");
     btn.disabled = false;
     btn.classList.add("active");
+    btn.innerText = "🔓 Desbloquear acesso";
   }
 }
 
