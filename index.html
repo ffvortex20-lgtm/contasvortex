@@ -2,68 +2,68 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Desbloquear</title>
+<title>Vortex Unlock</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-  <div class="top">
-    <span class="badge">CONTEÚDO EXCLUSIVO</span>
-    <h1>Desbloqueie o Acesso</h1>
-    <p>Complete as ações abaixo para liberar</p>
+<div class="header">
+  <span class="badge">CONTEÚDO EXCLUSIVO</span>
+  <h1>Desbloqueie o Acesso</h1>
+  <p>Complete todas as ações para liberar</p>
+</div>
+
+<div class="card">
+
+  <div class="progress-top">
+    <span id="txt">0/4 ações</span>
+    <span id="pct">0%</span>
   </div>
 
-  <div class="card">
-
-    <div class="progress-info">
-      <span id="progressText">0/4 ações concluídas</span>
-      <span id="percent">0%</span>
-    </div>
-
-    <div class="progress-bar">
-      <div id="progress"></div>
-    </div>
-
-    <!-- AÇÕES -->
-    <div class="task" id="task1">
-      <div>
-        <b>Siga meu canal do zap</b>
-        <small>Acesse e aguarde</small>
-      </div>
-      <button onclick="complete(1,'https://whatsapp.com/channel/0029VbC7FWcJENxsIOsndS15')">Ir</button>
-    </div>
-
-    <div class="task" id="task2">
-      <div>
-        <b>Grupo chat 24h</b>
-        <small>Entre no grupo</small>
-      </div>
-      <button onclick="complete(2,'https://chat.whatsapp.com/JRp7UwHFhfPIFokS5iGre9')">Ir</button>
-    </div>
-
-    <div class="task" id="task3">
-      <div>
-        <b>Se inscreva no YouTube</b>
-        <small>Ative notificações</small>
-      </div>
-      <button onclick="complete(3,'https://www.youtube.com/@Vortex-Ofc1')">Ir</button>
-    </div>
-
-    <div class="task" id="task4">
-      <div>
-        <b>Like no vídeo</b>
-        <small>Apoie o canal</small>
-      </div>
-      <button onclick="complete(4,'https://youtu.be/mTE6soYWmfA?si=QrxFGwEoCM00I-Kh')">Ir</button>
-    </div>
-
-    <button id="unlockBtn" class="unlock" disabled onclick="unlock()">
-      🔒 Complete todas as ações
-    </button>
-
+  <div class="bar">
+    <div id="barFill"></div>
   </div>
+
+  <!-- TASKS -->
+  <div class="task" id="t1">
+    <div>
+      <b>Canal do WhatsApp</b>
+      <small>Siga para continuar</small>
+    </div>
+    <button onclick="go(1,'https://whatsapp.com/channel/0029VbC7FWcJENxsIOsndS15')">Ir</button>
+  </div>
+
+  <div class="task" id="t2">
+    <div>
+      <b>Grupo 24h</b>
+      <small>Entre no grupo</small>
+    </div>
+    <button onclick="go(2,'https://chat.whatsapp.com/JRp7UwHFhfPIFokS5iGre9')">Ir</button>
+  </div>
+
+  <div class="task" id="t3">
+    <div>
+      <b>YouTube</b>
+      <small>Inscreva-se</small>
+    </div>
+    <button onclick="go(3,'https://www.youtube.com/@Vortex-Ofc1')">Ir</button>
+  </div>
+
+  <div class="task" id="t4">
+    <div>
+      <b>Like no vídeo</b>
+      <small>Apoie o canal</small>
+    </div>
+    <button onclick="go(4,'https://youtu.be/mTE6soYWmfA?si=QrxFGwEoCM00I-Kh')">Ir</button>
+  </div>
+
+  <button id="unlock" disabled onclick="openPage()">
+    🔒 Complete tudo
+  </button>
+
+</div>
 
 </div>
 
